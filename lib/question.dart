@@ -13,14 +13,14 @@ Question ({
 
 // Mapped Question Model to Json
 factory Question.fromJson(Map<String, dynamic> json) {
-  List<String> results = List<String>.from(json['incorrect_answers']);
-  results.add(json['correct_answer']);
-  results.shuffle();
+  List<String> allOptions = List<String>.from(json['incorrect_answers']);
+  allOptions.add(json['correct_answer']);
+  allOptions.shuffle();
 
   return Question(
     question: json['question'],
     correctAnswer: json['correct_answer'],
-    results: results
+    results: allOptions
   );
 }
 
