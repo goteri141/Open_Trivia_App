@@ -8,10 +8,18 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  final List<String> _questions;
+  List<String> _questions;
   final int _currentQuestionIndex = 0;
-  final int _score = 0;
+  int _score = 0;
   final bool _answered = false;
+
+  void updateScore () {
+    setState(() {
+      if (_answered == true) {
+        _score += 1;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
