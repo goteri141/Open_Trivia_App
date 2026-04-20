@@ -1,13 +1,13 @@
 // Question Model
 class Question {
   final String question;
-  final String correct_answer;
+  final String correctAnswer;
   final List<String> results; // correct answer plus incorrect answers
 
   
 Question ({
   required this.question,
-  required this.correct_answer,
+  required this.correctAnswer,
   required this.results
 });
 
@@ -19,7 +19,7 @@ factory Question.fromJson(Map<String, dynamic> json) {
 
   return Question(
     question: json['question'],
-    correct_answer: json['correct_answer'],
+    correctAnswer: json['correct_answer'],
     results: results
   );
 }
