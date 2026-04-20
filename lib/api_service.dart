@@ -6,7 +6,7 @@ class ApiService {
 
   // Loading 10 questions from the Open Trivia Database
   Future<List<Question>> getQuestions() async {
-    final String baseUrl = 'https://opentdb.com/api.php?amount=10';
+    final String baseUrl = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple';
 
     try {
       final response = await http.get(Uri.parse(baseUrl));
